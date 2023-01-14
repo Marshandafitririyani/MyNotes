@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Home.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:elevation="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchhome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:elevation="20dp"
+            android:layoutDirection="rtl"
+            android:background="@drawable/custome_background_text_view_3"
+            app:searchIcon="@drawable/ic__search"
+            app:queryHint="search_notes"
+            app:defaultQueryHint="search_notes"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            tools:listitem="@layout/custome_card"
+            app:layout_constraintTop_toBottomOf="@id/searchhome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/add"
+            android:scaleType="center"
+            app:fabCustomSize="80dp"
+            app:maxImageSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:menu="@menu/buttom_navmenu"
+                android:layoutDirection="ltr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="16sp"-->
+<!--            android:layout_marginTop="10sp"-->
+<!--            android:layout_marginEnd="16sp"-->
+<!--            app:cardBackgroundColor="@color/edittext_bg_color"-->
+<!--            app:cardCornerRadius="8sp"-->
+<!--            app:cardElevation="0dp">-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_search"-->
+<!--                android:layout_width="301dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:autofillHints="search"-->
+<!--                android:background="@color/trasparan"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:hint="Find Notes"-->
+<!--                android:imeOptions="actionSearch"-->
+<!--                android:inputType="text"-->
+<!--                android:padding="16dp"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@={name}"-->
+<!--                android:textSize="19sp" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="300dp"-->
+<!--                android:contentDescription="search"-->
+<!--                android:padding="8dp"-->
+<!--                android:scaleX="0.65"-->
+<!--                android:scaleY="0.65"-->
+<!--                android:src="@drawable/ic__search"-->
+<!--                app:tint="@color/teal_700" />-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="30dp"-->
+<!--            tools:listitem="@layout/custome_card"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+
+<!--&lt;!&ndash;        <androidx.cardview.widget.CardView&ndash;&gt;-->
+
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="4sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginEnd="4sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginBottom="4sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:elevation="10sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:cardBackgroundColor="@color/trasparan"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:cardCornerRadius="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:cardUseCompatPadding="true">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/et_card"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="301dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:autofillHints="search"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@color/trasparan"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center_vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:hint="Typing sesuka hatimu aja..."&ndash;&gt;-->
+<!--&lt;!&ndash;                android:imeOptions="actionSearch"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:inputType="text"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:singleLine="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="@={name}"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="19sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_margin="10sp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="search_view"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/recycler_view"/>&ndash;&gt;-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+<!--                -->
+<!--            </FrameLayout>-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/fabBtnCreateNote"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="300dp"-->
+<!--                android:layout_marginEnd="10sp"-->
+<!--                android:background="@color/black"-->
+<!--                android:src="@drawable/add"-->
+<!--                android:tint="@color/white"-->
+<!--                app:fabSize="normal"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:id="@+id/bottomNavigationView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:menu="@menu/buttom_navmenu"-->
+
+<!--                />-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/tv_welcome"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_margin="8sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:padding="8sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:text="welcome"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textColor=""&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textSize="16sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:textStyle="bold"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    <ImageView&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="37sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="37sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_margin="8sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:contentDescription="search"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:padding="8sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:src="@drawable/ic__search"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:tint="@color/trasparan" />&ndash;&gt;-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
